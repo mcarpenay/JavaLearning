@@ -4,30 +4,99 @@ Answer these below Questions:
 
 
 What jdk contains or composed of and define each components?
-What is IDE?
+Java development kit contains, 
+java libraries: predfined class and interfaces written by the developers of the java language 
+java virtual machine: 
+java compiler: used to convert the .java file to java byte code .class file
+java loader:used to load the java byte code onto the JIT (Just in time compiler)
+ 
+What is IDE?Integrated development environment is a specialized editor for writing code.
+
 What are the IDEs available in the market to support java?
+The two most popular are eclipse and intelij others are Netbeans
+
+
 Explain the entire java life cycle.
+code in .java file-->compile-->byte code .class file-->run on jvm
+
 what is class?
+A class is a blue print for an object of a specific type, that is a user defined object 
+
 What is object?
+An object is an instantiated instance of a class.
+
+
 What is the entry point of an application?
+The entry point of an application is the main()method
+
 Why main is static?
+The main is static so that we can call it without having to instantiate and instance of the object to call it using the new key word
+
 What is the difference between an Interface and Abstract class?
-Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+An interface contains the ideas for a future class object, it is composed of a list of method signatures but are never defined.An abstract class is  defined using the abstract key word and can contain both abstract non-defined methods and non-abstract defined methods.
+ Methods signatures are only defined in interface but never developed just a list of methods. In an abstract class method are defined interfaces are implemented and classes are extended. You can only extend one class but you can implement multiple interfaces
+
+
+Can you make an Object from an Interface and Abstract stract class ?
+No you cannot instantiate an instace of an interface or an abstract class.
+if not how do you use it ? 
+A class can implement multiple interfaces to simulate multiple inheritance in java and it can extend a single class or abstract class and inhert its attributes and behaviours. When you implement an interface you must define/implement the method of the interface in your implementing class. when you extend an abstract class you must define all of the abstract method in the  concrete class extending the abstract class. 
+
 what is Access Specifier?
+Access specifiers are used to specify the scope of variables and methods defined in classes. The java access specifiers are public, private and protected
+ 
 What is OOP ? Define each feature of java OOP.
-What is API? Name list of API that you have used so far.
-Does java support multiple inheritance?
+object oriented programming.The features are:
+Inheritance
+Encapsulation: data hiding
+Astraction
+polymorphism: mmethod overloading and method overriding
+
+What is API? Application programming Interface. Its a library of documentation on all class listed in the API explaining their attributes and behaviours. 
+ Name list of API that you have used so far.
+The java API more specifically the String class and Scanner API
+
+Does java support multiple inheritance? Yes through the use of interfaces a class can implement multiple interfaces
+
 What is method overloading and when it happens?
+Is when a class can have several method or constructors with the same name but different paramaters/ signatures. This occurs at compile time 
+
 What is method overriding and when it happens?
+Is when the logic of the method is changed and this occurs at runtime.
+
 Explain exceptions in java and how to handle it.
+An exception is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions. When an error occurs within a method, the method creates an object and hands it off to the runtime system.
+Java handles exceptions by throwing the exception in the class or by catching the exception using the try,catch block.
+
 What is static keyword in java? How it has been used in variables and methods ?
+A static variable is a variable declared using the static keyword.A static method is a method declared using the static keyword.To access static variables or methods of a class we do not need to instantiate an instance of the class. This is because they are associated with the class and not the object. Static variables in java keep the same value for all objects. You cannot use non-static variables in static method and static method cannot be overridden in java because they belong to the class not the object.
+
 What is final and how it has been used variables and methods?
+final variables cannot be changed and final methods cannot be overridden
+ 
 What is final, finally and finalize?
+final variables cannot be changed and final methods cannot be overridden
+finally is used with try catch blocks and is always executed and is used for clean up.
+finalize is used to call the java garbage collector to remove objects from memory and free up memory getting rid of objects that are no longer being used
+
+
 What is a constructor ?
+Is a method with the same name as the class and had no return type. It is used to instantiate an instance of the class and to initialize it.
+
 What is "this" keyword in java ?
-What is JVM stand for ?
-What version of java are you using?
-What is JAR stand for ?
-What is compile time and run time?
-What is heap?
-How java manage it's memory?
+The this keyword is used to reference  a variable in the class
+
+What is JVM stand for ?Java Virtual Machine
+
+What version of java are you using? version 1.7
+
+What is JAR stand for ?Java ARchive is a file format that contains multiple files and is used to distribute a complete Java application. It contains all the resources required (classes, images, sounds, etc.) to download and run a Java program via a single HTTP request for one file.
+
+What is compile time and run time? 
+Compile time is when the java compiler javac compiles the .java file to byte code and produces the .class file
+runtime is when the byte code is converted to machine language by JIT and loaded into memory to be executed
+
+What is heap?Is a part of RAM where objects exist
+
+How java manage it's memory?It use automatic garbage collection
+
