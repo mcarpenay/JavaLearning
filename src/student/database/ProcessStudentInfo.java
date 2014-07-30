@@ -1,10 +1,14 @@
 package student.database;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.xml.sax.SAXException;
+
+import xml.reader.Student;
+import xml.reader.XmlReader;
 
 public class ProcessStudentInfo {
 
@@ -25,6 +29,15 @@ public class ProcessStudentInfo {
 		 */
 			public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 				
+				
+				XmlReader xr = new XmlReader();
+				 List<Student> sl=xr.parseData("id");
+				 for(Student st:sl){
+						System.out.println("Student (id="+st.id +")"+st.firstName+""+st.lastName+ "Grade= "+ st.score);
+					 //System.out.println(sl);
+						
+				}
+				 
 			}
 
 }

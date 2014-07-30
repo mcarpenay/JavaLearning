@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.lang.String;
+
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -20,9 +22,11 @@ import org.xml.sax.SAXException;
  */
 
 public class XmlReader {
-	String path = "/Users/mrahman/Documents/workspace/InClassCodingExam/src/xml/reader/data.xml";
+	private static final String String = null;
+	String path = "C:\\SeleniumDevelop\\workspace\\InClassCodingExam\\src\\xml\\reader\\data.xml";
 	
 	public List<Student> parseData(String tagName) throws ParserConfigurationException, SAXException, IOException{
+		
 	DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 	DocumentBuilder builder = factory.newDocumentBuilder();
 	File file = new File(path);
@@ -48,7 +52,8 @@ public class XmlReader {
 						student.lastName = content;
 						break;
 					case "score":
-						student.score = content;  
+						//convert content into string letter grade to store in score
+						student.score  = getLetterGrade(content);  
 						break;	
 					}
 				}
@@ -59,6 +64,18 @@ public class XmlReader {
 	 }
 	return list;		
   }
+
+	
+	public String getLetterGrade(String cont){
+		String  grade ="";
+		int val;
+		val = Integer.parseInt(cont);
+		if(val>89 & val<101){ grade= "A";}
+		if(val>79 && val<90){grade=  "B";}
+		if(val>69 && val<80){grade=  "C";}
+		return grade;
+		
+	}
 	
 	
 	
